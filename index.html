@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>San Giovanni Collection - Use Ginga Crochê</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#551e0e",
+                        "primary-container": "#713422",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#ffb5a0",
+                        "secondary": "#526534",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#d4ebae",
+                        "tertiary": "#646117",
+                        "surface": "#fff8f4",
+                        "on-surface": "#281806",
+                        "surface-variant": "#fcddbe",
+                        "on-surface-variant": "#53433f",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#fff1e6",
+                        "surface-container": "#ffead8",
+                        "outline": "#86736e",
+                        "outline-variant": "#d9c1bb",
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif", "serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased min-h-screen selection:bg-tertiary selection:text-white">
+
+    <header class="fixed top-0 w-full z-50 bg-[#fff8f4]/90 backdrop-blur-md transition-all duration-300 border-b border-outline-variant/20">
+        <div class="flex justify-between items-center px-6 py-4 w-full max-w-7xl mx-auto">
+            <a class="font-headline font-bold text-2xl tracking-widest text-secondary" href="index.html">GINGA</a>
+            
+            <div class="flex items-center gap-5">
+                <a href="https://www.instagram.com/use.gingacroche/#" aria-label="Instagram" class="text-secondary hover:opacity-70 transition-opacity">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <a href="https://wa.me/5581995466508" aria-label="WhatsApp" class="text-secondary hover:opacity-70 transition-opacity">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12.031 0C5.405 0 .016 5.39.016 12.016c0 2.115.553 4.183 1.604 6.002L.004 24l6.11-1.603a11.956 11.956 0 005.917 1.564h.005c6.625 0 12.013-5.39 12.013-12.016C24.049 5.39 18.656 0 12.031 0zm0 21.961a9.965 9.965 0 01-5.083-1.385l-.364-.216-3.775.99.99-3.682-.236-.376A9.957 9.957 0 012.012 12.02c0-5.525 4.496-10.021 10.02-10.021 5.524 0 10.02 4.496 10.02 10.021 0 5.525-4.496 10.02-10.02 10.02zm5.495-7.502c-.302-.151-1.785-.882-2.062-.983-.277-.101-.479-.151-.68.151-.202.302-.78 1.026-.957 1.237-.176.211-.353.237-.655.086-1.574-.793-2.61-1.464-3.616-3.21-.176-.301.176-.282.473-.872.101-.202.05-.378-.025-.529-.076-.151-.68-1.638-.932-2.242-.246-.59-.496-.51-.68-.52-.176-.01-.378-.01-.58-.01-.202 0-.529.076-.806.378-.277.302-1.058 1.033-1.058 2.518s1.083 2.92 1.234 3.12c.151.202 2.129 3.25 5.155 4.553 1.958.841 2.65.733 3.136.634.568-.116 1.785-.73 2.037-1.436.252-.705.252-1.309.176-1.436-.076-.127-.278-.202-.58-.353z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24 pb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24 md:space-y-32">
+        
+        <section class="relative min-h-[70vh] rounded-xl overflow-hidden flex flex-col justify-end bg-surface-container-low group">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary-container/40 to-transparent z-10"></div>
+            <img alt="San Giovanni Collection" class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-1000 group-hover:scale-105" data-alt="editorial shot" src="img/hero-ginga.jpg"/>
+            
+            <div class="relative z-20 p-8 md:p-16 w-full md:max-w-2xl text-on-primary">
+                <h2 class="font-label text-sm uppercase tracking-[0.3em] mb-4 text-primary-fixed-dim">Coleção San Giovanni</h2>
+                <h1 class="font-headline text-5xl md:text-7xl lg:text-8xl tracking-tight mb-6 text-on-primary">Especial de São João</h1>
+                <p class="font-body text-lg md:text-xl text-on-primary/90 mb-10 max-w-lg leading-relaxed">
+                    Artesanato que dança com a alma do São João. Descubra peças que unem o rústico ao sofisticado, perfeitas para os dias de festa junina.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
+                    <a class="inline-flex items-center justify-center bg-secondary text-on-primary px-8 py-4 rounded hover:bg-surface hover:text-secondary transition-colors duration-300 font-label text-sm uppercase tracking-wider min-w-[200px]" href="catalog.html">
+                        Ver Coleção
+                    </a>
+                    <div class="flex gap-4">
+                        <a class="text-on-primary/80 hover:text-on-primary transition-colors font-label text-xs uppercase tracking-widest border-b border-on-primary/30 hover:border-on-primary pb-1" href="catalog.html?category=top">Top</a>
+                        <a class="text-on-primary/80 hover:text-on-primary transition-colors font-label text-xs uppercase tracking-widest border-b border-on-primary/30 hover:border-on-primary pb-1" href="catalog.html?category=conjunto">Conjunto</a>
+                        <a class="text-on-primary/80 hover:text-on-primary transition-colors font-label text-xs uppercase tracking-widest border-b border-on-primary/30 hover:border-on-primary pb-1" href="catalog.html?category=saia">Saia</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="collection" class="max-w-md mx-auto md:max-w-3xl lg:max-w-4xl">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-8 gap-6 text-center md:text-left">
+                <div>
+                    <h2 class="font-headline text-4xl md:text-5xl text-primary tracking-tight mb-4">Peças em Destaque</h2>
+                    <p class="font-body text-on-surface-variant">O encontro do rústico com o sofisticado na nossa curadoria.</p>
+                </div>
+                <div class="flex gap-4 mx-auto md:mx-0">
+                    <button id="prev-btn" aria-label="Anterior" class="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                        <span class="material-symbols-outlined">arrow_back</span>
+                    </button>
+                    <button id="next-btn" aria-label="Próximo" class="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="overflow-hidden relative w-full rounded-lg shadow-lg">
+                <div id="carousel-track" class="flex transition-transform duration-700 ease-in-out">
+                    
+                    <article class="carousel-item w-full shrink-0">
+                        <div class="bg-surface-container-lowest flex flex-col md:flex-row h-full">
+                            <div class="w-full md:w-1/2 aspect-[3/4] md:aspect-auto overflow-hidden bg-surface-variant relative">
+                                <img alt="Maria Bonita Chic" class="w-full h-full object-cover object-center" src="img/maria-bonita-chic.jpg"/>
+                            </div>
+                            <div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                                <p class="font-label text-xs text-outline uppercase tracking-widest mb-2">Conjunto</p>
+                                <h3 class="font-headline text-3xl text-primary mb-4">Maria Bonita Chic</h3>
+                                <p class="font-body text-on-surface-variant mb-8 leading-relaxed">Conjunto clássico e atemporal. A união perfeita entre técnica tradicional e caimento moderno.</p>
+                                <a href="product.html?id=maria-bonita-chic" class="inline-block text-center py-3 px-6 bg-primary text-on-primary hover:bg-primary-container transition-colors font-label text-xs uppercase tracking-wider rounded">
+                                    Ver Detalhes
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="carousel-item w-full shrink-0">
+                        <div class="bg-surface-container-lowest flex flex-col md:flex-row h-full">
+                            <div class="w-full md:w-1/2 aspect-[3/4] md:aspect-auto overflow-hidden bg-surface-variant relative">
+                                <img alt="Trama Canelada" class="w-full h-full object-cover object-center" src="img/trama-canelada.jpg"/>
+                            </div>
+                            <div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                                <p class="font-label text-xs text-outline uppercase tracking-widest mb-2">Saia</p>
+                                <h3 class="font-headline text-3xl text-primary mb-4">Trama Canelada</h3>
+                                <p class="font-body text-on-surface-variant mb-8 leading-relaxed">Versatilidade em formato de saia. Tramas precisas que valorizam a silhueta em cores terrosas.</p>
+                                <a href="product.html?id=trama-canelada" class="inline-block text-center py-3 px-6 bg-primary text-on-primary hover:bg-primary-container transition-colors font-label text-xs uppercase tracking-wider rounded">
+                                    Ver Detalhes
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="carousel-item w-full shrink-0">
+                        <div class="bg-surface-container-lowest flex flex-col md:flex-row h-full">
+                            <div class="w-full md:w-1/2 aspect-[3/4] md:aspect-auto overflow-hidden bg-surface-variant relative">
+                                <img alt="Trama Maria" class="w-full h-full object-cover object-center" src="img/trama-maria.jpg"/>
+                            </div>
+                            <div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                                <p class="font-label text-xs text-outline uppercase tracking-widest mb-2">Top</p>
+                                <h3 class="font-headline text-3xl text-primary mb-4">Trama Maria</h3>
+                                <p class="font-body text-on-surface-variant mb-8 leading-relaxed">Minimalista e essencial. O top perfeito para composições de verão, feito em fio de algodão.</p>
+                                <a href="product.html?id=trama-maria" class="inline-block text-center py-3 px-6 bg-primary text-on-primary hover:bg-primary-container transition-colors font-label text-xs uppercase tracking-wider rounded">
+                                    Ver Detalhes
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <div class="mt-12 flex justify-center">
+                <a href="catalog.html" class="inline-flex items-center gap-2 px-8 py-3 bg-transparent border border-secondary text-secondary hover:bg-secondary hover:text-white transition-colors duration-300 rounded font-label text-sm uppercase tracking-wider font-semibold group">
+                    Ver Catálogo Completo
+                    <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="bg-surface-container-low rounded-2xl overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+                <div class="p-10 md:p-16 flex flex-col justify-center">
+                    <h2 class="font-headline text-4xl text-primary mb-6">Por trás das peças</h2>
+                    <p class="font-body text-on-surface-variant mb-10 text-lg leading-relaxed">
+                        A Ginga celebra o tempo que as coisas levam para serem feitas. Utilizamos fios rigorosamente selecionados para garantir caimento impecável e durabilidade.
+                    </p>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+                                <span class="material-symbols-outlined">grass</span>
+                            </div>
+                            <div>
+                                <h4 class="font-label text-sm uppercase tracking-widest text-primary font-semibold mb-1">Anne 100% Algodão</h4>
+                                <p class="font-body text-sm text-on-surface-variant">Respirabilidade e toque natural para os dias de verão.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+                                <span class="material-symbols-outlined">water_drop</span>
+                            </div>
+                            <div>
+                                <h4 class="font-label text-sm uppercase tracking-widest text-primary font-semibold mb-1">Cordonê 100% Poliamida</h4>
+                                <p class="font-body text-sm text-on-surface-variant">Estrutura leve com sutil brilho molhado.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+                                <span class="material-symbols-outlined">flare</span>
+                            </div>
+                            <div>
+                                <h4 class="font-label text-sm uppercase tracking-widest text-primary font-semibold mb-1">Encanto 100% Viscose</h4>
+                                <p class="font-body text-sm text-on-surface-variant">Caimento nobre e luminoso para acabamentos premium.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative min-h-[400px] lg:min-h-full">
+                    <img alt="Crochet Process" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4WaOxw-a9-cEty1x19BBKTCFzjNd3h3TTKgTSJIVdJjqmSqUOjqF5HWVNVht2yoBqbOGjgKl_JCm9RJIM_RxrvmGG5M3u1Lmx-P7SypwTk4VXHqV4AhFz-CW1nn1L1h2QuUlcpqFWa92F5fxwAEnJogtvk6agBFoBiQbJbRTMM58fYq7WniSaNvi7TjvhMO3xw7PwFuwg9gAClC1Y451ms8rriyPyRCnfQIlImUuloAEXEqtv3zb8gAFRJXX5KLEi10pMNcqvNfQx"/>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 border-t border-outline-variant/30">
+            <div class="text-center mb-16 max-w-2xl mx-auto">
+                <h2 class="font-headline text-4xl text-primary mb-4">Como Pedir</h2>
+                <p class="font-body text-on-surface-variant">O luxo do sob medida. Acompanhamos você em cada etapa.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+                <div class="hidden md:block absolute top-12 left-[15%] right-[15%] h-px bg-outline-variant/50 -z-10"></div>
+                
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-24 h-24 rounded-full bg-surface flex items-center justify-center text-primary mb-6 shadow-md border border-surface-container-low relative">
+                        <span class="material-symbols-outlined text-3xl">checkroom</span>
+                        <div class="absolute -top-1 -right-1 w-8 h-8 rounded-full bg-secondary text-white font-label text-xs flex items-center justify-center">1</div>
+                    </div>
+                    <h3 class="font-headline text-xl text-primary mb-2">Escolha a Peça</h3>
+                    <p class="font-body text-sm text-on-surface-variant max-w-[220px]">Navegue pelo catálogo e escolha o modelo desejado.</p>
+                </div>
+
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-24 h-24 rounded-full bg-surface flex items-center justify-center text-primary mb-6 shadow-md border border-surface-container-low relative">
+                        <span class="material-symbols-outlined text-3xl">palette</span>
+                        <div class="absolute -top-1 -right-1 w-8 h-8 rounded-full bg-secondary text-white font-label text-xs flex items-center justify-center">2</div>
+                    </div>
+                    <h3 class="font-headline text-xl text-primary mb-2">Personalize</h3>
+                    <p class="font-body text-sm text-on-surface-variant max-w-[220px]">Defina o tamanho (P, M, G) e a cor do fio (Algodão, Poliamida ou Viscose).</p>
+                </div>
+
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-24 h-24 rounded-full bg-surface flex items-center justify-center text-primary mb-6 shadow-md border border-surface-container-low relative">
+                        <span class="material-symbols-outlined text-3xl">chat</span>
+                        <div class="absolute -top-1 -right-1 w-8 h-8 rounded-full bg-secondary text-white font-label text-xs flex items-center justify-center">3</div>
+                    </div>
+                    <h3 class="font-headline text-xl text-primary mb-2">Chame no WhatsApp</h3>
+                    <p class="font-body text-sm text-on-surface-variant max-w-[220px]">Finalizamos os detalhes e passamos os prazos por mensagem.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-full border-t border-outline-variant/30 bg-surface-container flex flex-col items-center gap-6 py-12 mt-8">
+        <div class="font-headline font-bold text-xl tracking-widest text-secondary">GINGA</div>
+        <div class="font-body text-xs tracking-widest uppercase opacity-60 text-center text-primary">
+            © 2026 USE GINGA CROCHÊ - ONDE O ARTESANATO ENCONTRA SUA GINGA. TODOS OS DIREITOS RESERVADOS.
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
