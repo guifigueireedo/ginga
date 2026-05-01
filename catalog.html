@@ -67,183 +67,30 @@
 
 <main class="flex-grow flex flex-col max-w-7xl mx-auto w-full px-4 py-8 md:px-8 md:py-12">
         
+        <!-- Header & Filters -->
         <div class="mb-12 flex flex-col items-center text-center mt-8">
             <h1 class="font-headline text-4xl md:text-5xl text-primary tracking-wider mb-4">Catálogo</h1>
             <p class="font-body text-outline mb-8 max-w-xl text-sm md:text-base">Explore o arquivo tátil da Ginga. Onde a tradição encontra o frescor contemporâneo.</p>
             
-            <div id="filters" class="flex flex-wrap gap-4 justify-center">
-                <button data-filter="all" class="filter-btn bg-secondary text-on-secondary font-body text-xs uppercase tracking-wider px-6 py-2 rounded shadow-md transition-colors border border-secondary">Todos</button>
-                <button data-filter="top" class="filter-btn bg-transparent text-on-surface border border-outline-variant/30 font-body text-xs uppercase tracking-wider px-6 py-2 rounded hover:border-secondary transition-colors">Top</button>
-                <button data-filter="conjunto" class="filter-btn bg-transparent text-on-surface border border-outline-variant/30 font-body text-xs uppercase tracking-wider px-6 py-2 rounded hover:border-secondary transition-colors">Conjunto</button>
-                <button data-filter="saia" class="filter-btn bg-transparent text-on-surface border border-outline-variant/30 font-body text-xs uppercase tracking-wider px-6 py-2 rounded hover:border-secondary transition-colors">Saia</button>
+            <!-- Novos Filtros Organizados -->
+            <div class="flex flex-col items-center gap-6 w-full">
+                <!-- Filtro de Gênero -->
+                <div class="flex bg-surface-variant p-1 rounded-lg">
+                    <button data-gender="todos" class="gender-btn px-6 py-2 rounded-md text-sm font-label uppercase tracking-wider bg-primary text-white shadow-sm transition-all">Todos</button>
+                    <button data-gender="Feminino" class="gender-btn px-6 py-2 rounded-md text-sm font-label uppercase tracking-wider text-on-surface-variant transition-all">Feminino</button>
+                    <button data-gender="Masculino" class="gender-btn px-6 py-2 rounded-md text-sm font-label uppercase tracking-wider text-on-surface-variant transition-all">Masculino</button>
+                </div>
+
+                <!-- Filtro de Categoria (VAZIO, O JS ASSUME DAQUI) -->
+                <div id="category-filters" class="flex flex-wrap gap-3 justify-center">
+                </div>
             </div>
         </div>
 
+        <!-- Product Grid (Deixe VAZIO! A mágica acontece no JS) -->
         <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-            
-            <a href="product.html?id=maria-bonita-chic" class="product-card group relative flex flex-col gap-4 block cursor-pointer" data-category="conjunto">
-                <div class="aspect-[3/4] bg-surface-variant rounded overflow-hidden relative">
-                    <img alt="Maria Bonita Chic" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="img/maria-bonita-chic.jpg"/>
-                    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
-                    <div class="absolute top-4 left-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded text-[10px] font-label uppercase tracking-widest text-primary">Conjunto</div>
-                </div>
-                <div class="flex flex-col gap-1 px-2">
-                    <div class="flex justify-between items-start">
-                        <h3 class="font-headline text-xl text-primary">Maria Bonita Chic</h3>
-                        <div class="flex gap-1 pt-1">
-                            <span class="w-4 h-4 rounded-full bg-[#713422] ring-1 ring-offset-1 ring-surface ring-outline/30" title="Terracota"></span>
-                        </div>
-                    </div>
-                    <p class="font-label text-xs uppercase text-outline tracking-wider">Fio Anne 100% Algodão</p>
-                    <span class="mt-4 self-start font-body text-sm text-primary border-b border-primary/30 pb-0.5 group-hover:border-primary transition-colors">Ver mais</span>
-                </div>
-            </a>
-
-            <a href="product.html?id=luar-do-sertao" class="product-card group relative flex flex-col gap-4 block cursor-pointer" data-category="conjunto">
-                <div class="aspect-[3/4] bg-surface-variant rounded overflow-hidden relative">
-                    <img alt="Luar do Sertão" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="img/luar-do-sertao.jpg"/>
-                    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
-                    <div class="absolute top-4 left-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded text-[10px] font-label uppercase tracking-widest text-primary">Conjunto</div>
-                </div>
-                <div class="flex flex-col gap-1 px-2">
-                    <div class="flex justify-between items-start">
-                        <h3 class="font-headline text-xl text-primary">Luar do Sertão</h3>
-                        <div class="flex gap-1 pt-1">
-                            <span class="w-4 h-4 rounded-full bg-[#506333] ring-1 ring-offset-1 ring-surface ring-outline/30" title="Verde Musgo"></span>
-                        </div>
-                    </div>
-                    <p class="font-label text-xs uppercase text-outline tracking-wider">Anne / Cordonê</p>
-                    <span class="mt-4 self-start font-body text-sm text-primary border-b border-primary/30 pb-0.5 group-hover:border-primary transition-colors">Ver mais</span>
-                </div>
-            </a>
-
-            <a href="product.html?id=glow-arraial" class="product-card group relative flex flex-col gap-4 block cursor-pointer" data-category="conjunto">
-                <div class="aspect-[3/4] bg-surface-variant rounded overflow-hidden relative">
-                    <img alt="Glow Arraial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="img/glow-arraial.jpg"/>
-                    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
-                    <div class="absolute top-4 left-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded text-[10px] font-label uppercase tracking-widest text-primary">Conjunto</div>
-                </div>
-                <div class="flex flex-col gap-1 px-2">
-                    <div class="flex justify-between items-start">
-                        <h3 class="font-headline text-xl text-primary">Glow Arraial</h3>
-                        <div class="flex gap-1 pt-1">
-                            <span class="w-4 h-4 rounded-full bg-[#eaccae] ring-1 ring-offset-1 ring-surface ring-outline/30" title="Off White"></span>
-                        </div>
-                    </div>
-                    <p class="font-label text-xs uppercase text-outline tracking-wider">Fio Anne 100% Algodão</p>
-                    <span class="mt-4 self-start font-body text-sm text-primary border-b border-primary/30 pb-0.5 group-hover:border-primary transition-colors">Ver mais</span>
-                </div>
-            </a>
-
-            <a href="product.html?id=trama-maria" class="product-card group relative flex flex-col gap-4 block cursor-pointer" data-category="top">
-                <div class="aspect-[3/4] bg-surface-variant rounded overflow-hidden relative">
-                    <img alt="Trama Maria" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="img/trama-maria.jpg"/>
-                    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
-                    <div class="absolute top-4 left-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded text-[10px] font-label uppercase tracking-widest text-primary">Top</div>
-                </div>
-                <div class="flex flex-col gap-1 px-2">
-                    <div class="flex justify-between items-start">
-                        <h3 class="font-headline text-xl text-primary">Trama Maria</h3>
-                        <div class="flex gap-1 pt-1">
-                            <span class="w-4 h-4 rounded-full bg-[#f7f198] ring-1 ring-offset-1 ring-surface ring-outline/30" title="Amarelo Manteiga"></span>
-                        </div>
-                    </div>
-                    <p class="font-label text-xs uppercase text-outline tracking-wider">Fio Anne 100% Algodão</p>
-                    <span class="mt-4 self-start font-body text-sm text-primary border-b border-primary/30 pb-0.5 group-hover:border-primary transition-colors">Ver mais</span>
-                </div>
-            </a>
-
-            <a href="product.html?id=perola-do-agreste" class="product-card group relative flex flex-col gap-4 block cursor-pointer" data-category="top">
-                <div class="aspect-[3/4] bg-surface-variant rounded overflow-hidden relative">
-                    <img alt="Pérola do Agreste" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="img/perola-do-agreste.jpg"/>
-                    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
-                    <div class="absolute top-4 left-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded text-[10px] font-label uppercase tracking-widest text-primary">Top</div>
-                </div>
-                <div class="flex flex-col gap-1 px-2">
-                    <div class="flex justify-between items-start">
-                        <h3 class="font-headline text-xl text-primary">Pérola do Agreste</h3>
-                        <div class="flex gap-1 pt-1">
-                            <span class="w-4 h-4 rounded-full bg-[#eaccae] ring-1 ring-offset-1 ring-surface ring-outline/30" title="Off White"></span>
-                        </div>
-                    </div>
-                    <p class="font-label text-xs uppercase text-outline tracking-wider">Fio Anne 100% Algodão</p>
-                    <span class="mt-4 self-start font-body text-sm text-primary border-b border-primary/30 pb-0.5 group-hover:border-primary transition-colors">Ver mais</span>
-                </div>
-            </a>
-
-            <a href="product.html?id=ponto-de-fogo" class="product-card group relative flex flex-col gap-4 block cursor-pointer" data-category="top">
-                <div class="aspect-[3/4] bg-surface-variant rounded overflow-hidden relative">
-                    <img alt="Ponto de Fogo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="img/ponto-de-fogo.jpg"/>
-                    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
-                    <div class="absolute top-4 left-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded text-[10px] font-label uppercase tracking-widest text-primary">Top</div>
-                </div>
-                <div class="flex flex-col gap-1 px-2">
-                    <div class="flex justify-between items-start">
-                        <h3 class="font-headline text-xl text-primary">Ponto de Fogo</h3>
-                        <div class="flex gap-1 pt-1">
-                            <span class="w-4 h-4 rounded-full bg-[#000000] ring-1 ring-offset-1 ring-surface ring-outline/30" title="Preto"></span>
-                        </div>
-                    </div>
-                    <p class="font-label text-xs uppercase text-outline tracking-wider">Fio Anne 100% Algodão</p>
-                    <span class="mt-4 self-start font-body text-sm text-primary border-b border-primary/30 pb-0.5 group-hover:border-primary transition-colors">Ver mais</span>
-                </div>
-            </a>
-
-            <a href="product.html?id=trama-canelada" class="product-card group relative flex flex-col gap-4 block cursor-pointer" data-category="saia">
-                <div class="aspect-[3/4] bg-surface-variant rounded overflow-hidden relative">
-                    <img alt="Trama Canelada" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="img/trama-canelada.jpg"/>
-                    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
-                    <div class="absolute top-4 left-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded text-[10px] font-label uppercase tracking-widest text-primary">Saia</div>
-                </div>
-                <div class="flex flex-col gap-1 px-2">
-                    <div class="flex justify-between items-start">
-                        <h3 class="font-headline text-xl text-primary">Trama Canelada</h3>
-                        <div class="flex gap-1 pt-1">
-                            <span class="w-4 h-4 rounded-full bg-[#713422] ring-1 ring-offset-1 ring-surface ring-outline/30" title="Terracota"></span>
-                        </div>
-                    </div>
-                    <p class="font-label text-xs uppercase text-outline tracking-wider">Fio Anne 100% Algodão</p>
-                    <span class="mt-4 self-start font-body text-sm text-primary border-b border-primary/30 pb-0.5 group-hover:border-primary transition-colors">Ver mais</span>
-                </div>
-            </a>
-
-            <a href="product.html?id=ondas-velho-chico" class="product-card group relative flex flex-col gap-4 block cursor-pointer" data-category="saia">
-                <div class="aspect-[3/4] bg-surface-variant rounded overflow-hidden relative">
-                    <img alt="Ondas Velho Chico" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="img/ondas-velho-chico.jpg"/>
-                    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
-                    <div class="absolute top-4 left-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded text-[10px] font-label uppercase tracking-widest text-primary">Saia</div>
-                </div>
-                <div class="flex flex-col gap-1 px-2">
-                    <div class="flex justify-between items-start">
-                        <h3 class="font-headline text-xl text-primary">Ondas Velho Chico</h3>
-                        <div class="flex gap-1 pt-1">
-                            <span class="w-4 h-4 rounded-full bg-[#000000] ring-1 ring-offset-1 ring-surface ring-outline/30" title="Preto"></span>
-                        </div>
-                    </div>
-                    <p class="font-label text-xs uppercase text-outline tracking-wider">Anne / Cordonê</p>
-                    <span class="mt-4 self-start font-body text-sm text-primary border-b border-primary/30 pb-0.5 group-hover:border-primary transition-colors">Ver mais</span>
-                </div>
-            </a>
-
-            <a href="product.html?id=ventanias-do-arraial" class="product-card group relative flex flex-col gap-4 block cursor-pointer" data-category="saia">
-                <div class="aspect-[3/4] bg-surface-variant rounded overflow-hidden relative">
-                    <img alt="Ventanias do Arraial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="img/ventanias-do-arraial.jpg"/>
-                    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
-                    <div class="absolute top-4 left-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded text-[10px] font-label uppercase tracking-widest text-primary">Saia</div>
-                </div>
-                <div class="flex flex-col gap-1 px-2">
-                    <div class="flex justify-between items-start">
-                        <h3 class="font-headline text-xl text-primary">Ventanias do Arraial</h3>
-                        <div class="flex gap-1 pt-1">
-                            <span class="w-4 h-4 rounded-full bg-[#506333] ring-1 ring-offset-1 ring-surface ring-outline/30" title="Verde Musgo"></span>
-                        </div>
-                    </div>
-                    <p class="font-label text-xs uppercase text-outline tracking-wider">Anne / Cordonê</p>
-                    <span class="mt-4 self-start font-body text-sm text-primary border-b border-primary/30 pb-0.5 group-hover:border-primary transition-colors">Ver mais</span>
-                </div>
-            </a>
-
         </div>
+        
     </main>
 
     <footer class="w-full border-t border-outline-variant/30 bg-surface-container flex flex-col items-center gap-6 py-12 mt-auto">
