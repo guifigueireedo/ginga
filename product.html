@@ -114,17 +114,39 @@
                 </div>
 
                 <div class="mt-auto pt-8 border-t border-outline-variant/20">
-                    <div class="mb-6 bg-surface-container-low p-4 rounded border border-outline-variant/30">
-                        <p class="font-headline text-lg italic text-primary mb-2">Valor sob consulta</p>
+                    
+                    <!-- Caixa de Preço e Info -->
+                    <div class="mb-6 bg-surface-container-low p-5 rounded-lg border border-outline-variant/30">
+                        
+                        <!-- Preço Base -->
+                        <p class="font-headline text-3xl font-bold text-primary flex items-baseline gap-2 mb-2">
+                            <span class="font-body text-xs font-normal italic text-on-surface-variant uppercase tracking-widest">A partir de</span>
+                            <span id="prod-price">R$ 0,00</span>
+                        </p>
+
+                        <!-- Chamada para o Valor Artesanal -->
+                        <div class="mt-4 pt-4 border-t border-outline-variant/30">
+                            <p class="font-body text-sm text-on-surface-variant mb-3">
+                                Cada corpo é único, e a sua roupa também deve ser. Ponto a ponto, tecemos exclusivamente para as suas medidas.
+                            </p>
+                            <button id="open-pricing-modal" class="inline-flex items-center gap-2 text-secondary hover:text-primary font-label text-xs uppercase tracking-widest font-bold transition-colors group">
+                                Descubra o valor do sob medida
+                                <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Pagamento -->
+                    <div class="mb-6 bg-surface p-4 rounded border border-outline-variant/20">
                         <p class="font-body text-xs text-on-surface-variant leading-relaxed">
                             <span class="font-semibold text-primary">Forma de pagamento:</span> 50% do valor no ato do pedido e 50% na finalização da peça.<br>
-                            Aceitamos PIX e Cartão de Crédito.
+                            Aceitamos PIX e Dinheiro.
                         </p>
                     </div>
                     
                     <p id="error-msg" class="text-red-700 text-sm mb-2 hidden font-label">Por favor, selecione cor e tamanho.</p>
                     
-                    <button id="whatsapp-btn" class="w-full bg-secondary text-white py-4 px-8 font-label text-sm uppercase tracking-widest font-medium hover:bg-primary-container transition-colors duration-300 flex items-center justify-center gap-3 rounded shadow-md opacity-50 cursor-not-allowed">
+                    <button id="whatsapp-btn" class="w-full bg-primary text-white py-4 px-8 font-label text-sm uppercase tracking-widest font-medium hover:bg-primary-container transition-colors duration-300 flex items-center justify-center gap-3 rounded shadow-md opacity-50 cursor-not-allowed">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 0C5.405 0 .016 5.39.016 12.016c0 2.115.553 4.183 1.604 6.002L.004 24l6.11-1.603a11.956 11.956 0 005.917 1.564h.005c6.625 0 12.013-5.39 12.013-12.016C24.049 5.39 18.656 0 12.031 0zm0 21.961a9.965 9.965 0 01-5.083-1.385l-.364-.216-3.775.99.99-3.682-.236-.376A9.957 9.957 0 012.012 12.02c0-5.525 4.496-10.021 10.02-10.021 5.524 0 10.02 4.496 10.02 10.021 0 5.525-4.496 10.02-10.02 10.02zm5.495-7.502c-.302-.151-1.785-.882-2.062-.983-.277-.101-.479-.151-.68.151-.202.302-.78 1.026-.957 1.237-.176.211-.353.237-.655.086-1.574-.793-2.61-1.464-3.616-3.21-.176-.301.176-.282.473-.872.101-.202.05-.378-.025-.529-.076-.151-.68-1.638-.932-2.242-.246-.59-.496-.51-.68-.52-.176-.01-.378-.01-.58-.01-.202 0-.529.076-.806.378-.277.302-1.058 1.033-1.058 2.518s1.083 2.92 1.234 3.12c.151.202 2.129 3.25 5.155 4.553 1.958.841 2.65.733 3.136.634.568-.116 1.785-.73 2.037-1.436.252-.705.252-1.309.176-1.436-.076-.127-.278-.202-.58-.353z"/></svg>
                         Fazer Pedido via WhatsApp
                     </button>
@@ -132,6 +154,38 @@
             </div>
         </div>
     </main>
+
+    <!-- Modal de Precificação (Invisível por padrão) -->
+    <div id="pricing-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <!-- Fundo escuro desfocado -->
+        <div id="pricing-backdrop" class="absolute inset-0 bg-stone-900/60 backdrop-blur-sm cursor-pointer"></div>
+        
+        <!-- Conteúdo do Modal -->
+        <div class="relative bg-surface w-full max-w-md p-8 rounded-xl shadow-2xl transform scale-95 transition-transform duration-300" id="pricing-content">
+            <!-- Botão de Fechar -->
+            <button id="close-pricing-modal" class="absolute top-4 right-4 text-outline hover:text-primary transition-colors focus:outline-none">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            
+            <!-- Ícone Elegante -->
+            <div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-secondary mb-6">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'wght' 300;">diamond</span>
+            </div>
+            
+            <h3 class="font-headline text-2xl text-primary mb-3">O Luxo do Feito à Mão</h3>
+            <p class="font-body text-sm text-on-surface-variant leading-relaxed mb-4">
+                A Use Ginga não trabalha com produção em massa. Nós celebramos a sua individualidade criando peças exclusivas, tecidas com carinho para abraçar perfeitamente as suas curvas.
+            </p>
+            <p class="font-body text-sm text-on-surface-variant leading-relaxed mb-6">
+                O valor <strong class="text-primary font-semibold">"a partir de"</strong> reflete o design base (Tamanho P). Como adaptamos cada detalhe para o seu corpo, o valor final pode sofrer variações de acordo com as suas medidas exatas, pois demandam mais fios e horas de dedicação exclusiva da nossa artesã a você.
+            </p>
+            
+            <!-- Botão de Ação -->
+            <button id="btn-understood" class="w-full py-3 bg-secondary text-white rounded font-label text-xs uppercase tracking-widest hover:bg-secondary-container hover:text-secondary-fixed-variant transition-colors">
+                Entendi, quero a minha!
+            </button>
+        </div>
+    </div>
 
     <footer class="w-full border-t border-outline-variant/30 bg-surface-container flex flex-col items-center gap-6 py-12 mt-auto">
         <div class="font-headline font-bold text-xl tracking-widest text-secondary">GINGA</div>

@@ -13,74 +13,74 @@ const V = {
 };
 
 const productsDB = {
-    // CONJUNTOS (Feminino)
-    "maria-bonita-chic": { 
-        name: "Maria Bonita Chic", cat: "Conjunto", gender: "Feminino", img: "img/maria-bonita-chic.jpg",
-        desc: "Conjunto clássico e atemporal. A união perfeita entre técnica tradicional e caimento moderno.",
-        variants: [V.terracota, V.offwhite, V.verdeAnne, V.verdeCordone] 
-    },
-    "luar-do-sertao": { 
-        name: "Luar do Sertão", cat: "Conjunto", gender: "Feminino", img: "img/luar-do-sertao.jpg",
-        desc: "Design arrojado com fendas táticas. Ideal para os dias mais quentes do verão.",
-        variants: [V.lima, V.terracota, V.offwhite, V.verdeAnne, V.verdeCordone] 
-    },
-    "glow-arraial": { 
-        name: "Glow Arraial", cat: "Conjunto", gender: "Feminino", img: "img/glow-arraial.jpg",
-        desc: "Trama aberta e respirável, garantindo um visual leve e praiano para qualquer ocasião.",
-        variants: [V.verdeAnne, V.terracota, V.offwhite, V.verdeCordone] 
-    },
-    
-    // TOPS (Feminino)
-    "trama-maria": { 
-        name: "Trama Maria", cat: "Top", gender: "Feminino", img: "img/trama-maria.jpg",
-        desc: "Minimalista e essencial. O top perfeito para composições, feito inteiramente à mão.",
-        variants: [V.terracota, V.lima, V.offwhite, V.pretoAnne] 
-    },
-    "perola-do-agreste": { 
-        name: "Pérola do Agreste", cat: "Top", gender: "Feminino", img: "img/perola-do-agreste.jpg",
-        desc: "Detalhes delicados na amarração. Pode ser usado como peça principal ou sobreposição.",
-        variants: [V.offwhite, V.terracota, V.lima, V.pretoAnne] 
-    },
-    "ponto-de-fogo": { 
-        name: "Ponto de Fogo", cat: "Top", gender: "Feminino", img: "img/ponto-de-fogo.jpg",
-        desc: "Modelagem cropped com suporte firme e textura rica aos olhos e ao toque.",
-        variants: [V.terracota, V.pretoAnne, V.lima, V.offwhite] 
-    },
+            // CONJUNTOS (Feminino)
+            "maria-bonita-chic": { 
+                name: "Maria Bonita Chic", cat: "Conjunto", gender: "Feminino", img: "img/maria-bonita-chic.jpg", price: 280,
+                desc: "Conjunto clássico e atemporal. A união perfeita entre técnica tradicional e caimento moderno.",
+                variants: [V.terracota, V.offwhite, V.verdeAnne, V.verdeCordone] 
+            },
+            "luar-do-sertao": { 
+                name: "Luar do Sertão", cat: "Conjunto", gender: "Feminino", img: "img/luar-do-sertao.jpg", price: 255,
+                desc: "Design arrojado com fendas táticas. Ideal para os dias mais quentes do verão.",
+                variants: [V.lima, V.terracota, V.offwhite, V.verdeAnne, V.verdeCordone] 
+            },
+            "glow-arraial": { 
+                name: "Glow Arraial", cat: "Conjunto", gender: "Feminino", img: "img/glow-arraial.jpg", price: 225,
+                desc: "Trama aberta e respirável, garantindo um visual leve e praiano para qualquer ocasião.",
+                variants: [V.verdeAnne, V.terracota, V.offwhite, V.verdeCordone] 
+            },
+            
+            // TOPS (Feminino)
+            "trama-maria": { 
+                name: "Trama Maria", cat: "Top", gender: "Feminino", img: "img/trama-maria.jpg", price: 140,
+                desc: "Minimalista e essencial. O top perfeito para composições, feito inteiramente à mão.",
+                variants: [V.terracota, V.lima, V.offwhite, V.pretoAnne] 
+            },
+            "perola-do-agreste": { 
+                name: "Pérola do Agreste", cat: "Top", gender: "Feminino", img: "img/perola-do-agreste.jpg", price: 140,
+                desc: "Detalhes delicados na amarração. Pode ser usado como peça principal ou sobreposição.",
+                variants: [V.offwhite, V.terracota, V.lima, V.pretoAnne] 
+            },
+            "ponto-de-fogo": { 
+                name: "Ponto de Fogo", cat: "Top", gender: "Feminino", img: "img/ponto-de-fogo.jpg", price: 180,
+                desc: "Modelagem cropped com suporte firme e textura rica aos olhos e ao toque.",
+                variants: [V.terracota, V.pretoAnne, V.lima, V.offwhite] 
+            },
 
-    // SAIAS (Feminino)
-    "trama-canelada": { 
-        name: "Trama Canelada", cat: "Saia", gender: "Feminino", img: "img/trama-canelada.jpg",
-        desc: "Caimento fluido e alongado. As texturas verticais valorizam a silhueta naturalmente.",
-        variants: [V.offwhite, V.terracota, V.pretoAnne, V.pretoCordone, V.verdeAnne, V.verdeCordone] 
-    },
-    "ondas-velho-chico": { 
-        name: "Ondas Velho Chico", cat: "Saia", gender: "Feminino", img: "img/ondas-velho-chico.jpg",
-        desc: "Inspirada no balanço das águas, essa saia traz um movimento único a cada passo.",
-        variants: [V.terracota, V.pretoAnne, V.offwhite, V.pretoCordone, V.verdeAnne, V.verdeCordone] 
-    },
-    "ventanias-do-arraial": { 
-        name: "Ventanias do Arraial", cat: "Saia", gender: "Feminino", img: "img/ventanias-do-arraial.jpg",
-        desc: "Volume estratégico e transparência na medida certa. Uma peça de destaque absoluto.",
-        variants: [V.verdeAnne, V.terracota, V.offwhite, V.pretoAnne, V.pretoCordone, V.verdeCordone] 
-    },
+            // SAIAS (Feminino)
+            "trama-canelada": { 
+                name: "Trama Canelada", cat: "Saia", gender: "Feminino", img: "img/trama-canelada.jpg", price: 135,
+                desc: "Caimento fluido e alongado. As texturas verticais valorizam a silhueta naturalmente.",
+                variants: [V.offwhite, V.terracota, V.pretoAnne, V.pretoCordone, V.verdeAnne, V.verdeCordone] 
+            },
+            "ondas-velho-chico": { 
+                name: "Ondas Velho Chico", cat: "Saia", gender: "Feminino", img: "img/ondas-velho-chico.jpg", price: 135,
+                desc: "Inspirada no balanço das águas, essa saia traz um movimento único a cada passo.",
+                variants: [V.terracota, V.pretoAnne, V.offwhite, V.pretoCordone, V.verdeAnne, V.verdeCordone] 
+            },
+            "ventanias-do-arraial": { 
+                name: "Ventanias do Arraial", cat: "Saia", gender: "Feminino", img: "img/ventanias-do-arraial.jpg", price: 225,
+                desc: "Volume estratégico e transparência na medida certa. Uma peça de destaque absoluto.",
+                variants: [V.verdeAnne, V.terracota, V.offwhite, V.pretoAnne, V.pretoCordone, V.verdeCordone] 
+            },
 
-    // CAMISETAS (Masculino)
-    "sertao": {
-        name: "Sertão", cat: "Camiseta", gender: "Masculino", img: "img/camisa-sertao.jpg",
-        desc: "Corte reto e estruturado. A trama em crochê traz uma releitura rústica e sofisticada da camisa clássica.",
-        variants: [V.terracota, V.lima, V.offwhite, V.pretoAnne, V.verdeAnne, V.verdeCordone] 
-    },
-    "mosaico-junino": {
-        name: "Mosaico Junino", cat: "Camiseta", gender: "Masculino", img: "img/camisa-mosaico.jpg",
-        desc: "Padronagem exclusiva que homenageia as festividades nordestinas, com caimento perfeito.",
-        variants: [V.offwhite, V.terracota, V.lima, V.pretoAnne, V.verdeAnne, V.verdeCordone] 
-    },
-    "chama-nordestina": {
-        name: "Chama Nordestina", cat: "Camiseta", gender: "Masculino", img: "img/camisa-chama.jpg",
-        desc: "Frescor e personalidade. Uma peça com vazados estratégicos para quem tem atitude.",
-        variants: [V.offwhite, V.terracota, V.lima, V.pretoAnne, V.verdeAnne, V.verdeCordone] 
-    }
-};
+            // CAMISETAS (Masculino)
+            "sertao": {
+                name: "Sertão", cat: "Camiseta", gender: "Masculino", img: "img/camisa-sertao.jpg", price: 315,
+                desc: "Corte reto e estruturado. A trama em crochê traz uma releitura rústica e sofisticada da camisa clássica.",
+                variants: [V.terracota, V.lima, V.offwhite, V.pretoAnne, V.verdeAnne, V.verdeCordone] 
+            },
+            "mosaico-junino": {
+                name: "Mosaico Junino", cat: "Camiseta", gender: "Masculino", img: "img/camisa-mosaico.jpg", price: 395,
+                desc: "Padronagem exclusiva que homenageia as festividades nordestinas, com caimento perfeito.",
+                variants: [V.offwhite, V.terracota, V.lima, V.pretoAnne, V.verdeAnne, V.verdeCordone] 
+            },
+            "chama-nordestina": {
+                name: "Chama Nordestina", cat: "Camiseta", gender: "Masculino", img: "img/camisa-chama.jpg", price: 345,
+                desc: "Frescor e personalidade. Uma peça com vazados estratégicos para quem tem atitude.",
+                variants: [V.offwhite, V.terracota, V.lima, V.pretoAnne, V.verdeAnne, V.verdeCordone] 
+            }
+        };
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -267,6 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('prod-category').innerText = `${product.gender} • ${product.cat}`;
         document.getElementById('prod-desc').innerText = product.desc;
         document.getElementById('prod-image-main').src = product.img;
+        document.getElementById('prod-price').innerText = `R$ ${product.price},00`;
 
         const colorContainer = document.getElementById('color-options');
         product.variants.forEach((variant, index) => {
@@ -328,5 +329,37 @@ document.addEventListener('DOMContentLoaded', () => {
             const wppUrl = `https://wa.me/5581995466508?text=${encodeURIComponent(message)}`;
             window.open(wppUrl, '_blank');
         });
+
+        // ==========================================
+        // LÓGICA DO MODAL DE PRECIFICAÇÃO
+        // ==========================================
+        const pricingModal = document.getElementById('pricing-modal');
+        if (pricingModal) {
+            const openBtn = document.getElementById('open-pricing-modal');
+            const closeBtn = document.getElementById('close-pricing-modal');
+            const backdrop = document.getElementById('pricing-backdrop');
+            const understoodBtn = document.getElementById('btn-understood');
+            const modalContent = document.getElementById('pricing-content');
+
+            // Função para abrir com animação
+            const openModal = () => {
+                pricingModal.classList.remove('opacity-0', 'pointer-events-none');
+                modalContent.classList.remove('scale-95');
+                modalContent.classList.add('scale-100');
+            };
+
+            // Função para fechar com animação
+            const closeModal = () => {
+                pricingModal.classList.add('opacity-0', 'pointer-events-none');
+                modalContent.classList.remove('scale-100');
+                modalContent.classList.add('scale-95');
+            };
+
+            // Eventos de Clique
+            if (openBtn) openBtn.addEventListener('click', openModal);
+            if (closeBtn) closeBtn.addEventListener('click', closeModal);
+            if (backdrop) backdrop.addEventListener('click', closeModal);
+            if (understoodBtn) understoodBtn.addEventListener('click', closeModal);
+        }
     }
 });
