@@ -53,7 +53,7 @@ const productsDB = {
     
     // TOPS
     "trama-maria": { 
-        name: "Trama Maria", cat: "Top", gender: "Feminino", img: "img/trama-maria.jpg", price: 140.00,
+        name: "Trama Maria", cat: "Top", gender: "Feminino", img: "img/trama-maria.jpg", price: 119.90,
         yarn: "Anne 100% Algodão",
         desc: "Minimalista e essencial. O top perfeito para composições. Top feito com fio Anne.",
         variants: [
@@ -64,7 +64,7 @@ const productsDB = {
         ] 
     },
     "perola-do-agreste": { 
-        name: "Pérola do Agreste", cat: "Top", gender: "Feminino", img: "img/perola-do-agreste.jpg", price: 140.00,
+        name: "Pérola do Agreste", cat: "Top", gender: "Feminino", img: "img/perola-do-agreste.jpg", price: 119.90,
         yarn: "Anne 100% Algodão",
         desc: "Detalhes delicados na amarração. Pode ser usado como peça principal ou sobreposição. Top feito com fio Anne.",
         variants: [
@@ -317,8 +317,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.target.classList.add('bg-primary', 'text-white', 'shadow-sm');
                 e.target.classList.remove('text-on-surface-variant');
                 
-                renderCategoryBtns(); // Atualiza quais categorias aparecem
-                applyFilters(); // Atualiza o grid
+                renderCategoryBtns();
+                applyFilters();
             });
         });
     }
@@ -345,7 +345,11 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('prod-category').innerText = `${product.gender} • ${product.cat}`;
         document.getElementById('prod-desc').innerText = product.desc;
         document.getElementById('prod-image-main').src = product.img;
-        document.getElementById('prod-price').innerText = `R$ ${product.price},00`;
+        
+        document.getElementById('prod-price').innerText = product.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        
+        document.getElementById('yarn-info').innerText = product.yarn;
+        document.getElementById('yarn-info').classList.remove('text-on-surface-variant', 'italic');
 
         const colorContainer = document.getElementById('color-options');
         product.variants.forEach((variant, index) => {
@@ -361,8 +365,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 selectedColor = variant;
                 document.getElementById('selected-color-name').innerText = variant.name;
-                document.getElementById('yarn-info').innerText = variant.yarn;
-                document.getElementById('yarn-info').classList.remove('text-on-surface-variant', 'italic');
                 
                 const mainImg = document.getElementById('prod-image-main');
                 const warningDiv = document.getElementById('placeholder-warning');
