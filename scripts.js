@@ -20,7 +20,7 @@ const vImg = (baseColor, imgPath, placeholderOf = null) => ({
 const productsDB = {
     // CONJUNTOS
     "maria-bonita-chic": { 
-        name: "Maria Bonita Chic", cat: "Conjunto", gender: "Feminino", img: "img/maria-bonita-chic.jpg", price: 280,
+        name: "Maria Bonita Chic", cat: "Conjunto", gender: "Feminino", img: "img/maria-bonita-chic.jpg", price: 280.00,
         yarn: "Anne 100% Algodão",
         desc: "Conjunto clássico e atemporal. A união perfeita entre técnica tradicional e caimento moderno. Conjunto feito com fio Anne.",
         variants: [
@@ -30,7 +30,7 @@ const productsDB = {
         ] 
     },
     "glow-arraial": { 
-        name: "Glow Arraial", cat: "Conjunto", gender: "Feminino", img: "img/glow-arraial.jpg", price: 225,
+        name: "Glow Arraial", cat: "Conjunto", gender: "Feminino", img: "img/glow-arraial.jpg", price: 199.90,
         yarn: "Anne 100% Algodão",
         desc: "Trama aberta e respirável, garantindo um visual leve e praiano para qualquer ocasião. Conjunto feito com fio Anne.",
         variants: [
@@ -40,20 +40,20 @@ const productsDB = {
         ] 
     },
     "luar-do-sertao": { 
-        name: "Luar do Sertão", cat: "Conjunto", gender: "Feminino", img: "img/luar-do-sertao.jpg", price: 255,
+        name: "Luar do Sertão", cat: "Conjunto", gender: "Feminino", img: "img/luar-do-sertao.jpg", price: 255.00,
         yarn: "Anne e Cordonê",
         desc: "Design arrojado com fendas táticas. Ideal para os dias mais quentes do verão. Conjunto feito com fio Anne e Cordonê.",
         variants: [
             vImg(V.lima, "img/luar-do-sertao.jpg"),
-            vImg(V.terracota, "img/luar-do-sertao.jpg", V.lima.name),
-            vImg(V.offwhite, "img/luar-do-sertao.jpg", V.lima.name),
-            vImg(V.verde, "img/luar-do-sertao.jpg", V.lima.name)
+            vImg(V.terracota, "img/luar-do-sertao-terracota.jpg",),
+            vImg(V.offwhite, "img/luar-do-sertao-offwhite.jpg",),
+            vImg(V.verde, "img/luar-do-sertao-verde.jpg",)
         ] 
     },
     
     // TOPS
     "trama-maria": { 
-        name: "Trama Maria", cat: "Top", gender: "Feminino", img: "img/trama-maria.jpg", price: 140,
+        name: "Trama Maria", cat: "Top", gender: "Feminino", img: "img/trama-maria.jpg", price: 140.00,
         yarn: "Anne 100% Algodão",
         desc: "Minimalista e essencial. O top perfeito para composições. Top feito com fio Anne.",
         variants: [
@@ -64,7 +64,7 @@ const productsDB = {
         ] 
     },
     "perola-do-agreste": { 
-        name: "Pérola do Agreste", cat: "Top", gender: "Feminino", img: "img/perola-do-agreste.jpg", price: 140,
+        name: "Pérola do Agreste", cat: "Top", gender: "Feminino", img: "img/perola-do-agreste.jpg", price: 140.00,
         yarn: "Anne 100% Algodão",
         desc: "Detalhes delicados na amarração. Pode ser usado como peça principal ou sobreposição. Top feito com fio Anne.",
         variants: [
@@ -75,7 +75,7 @@ const productsDB = {
         ] 
     },
     "ponto-de-fogo": { 
-        name: "Ponto de Fogo", cat: "Top", gender: "Feminino", img: "img/ponto-de-fogo.jpg", price: 180,
+        name: "Ponto de Fogo", cat: "Top", gender: "Feminino", img: "img/ponto-de-fogo.jpg", price: 165.00,
         yarn: "Anne 100% Algodão",
         desc: "Modelagem cropped com suporte firme e textura rica aos olhos e ao toque. Top feito com fio Anne.",
         variants: [
@@ -88,7 +88,7 @@ const productsDB = {
 
     // SAIAS
     "ventanias-do-arraial": { 
-        name: "Ventanias do Arraial", cat: "Saia", gender: "Feminino", img: "img/ventanias-do-arraial.jpg", price: 225,
+        name: "Ventanias do Arraial", cat: "Saia", gender: "Feminino", img: "img/ventanias-do-arraial.jpg", price: 225.00,
         yarn: "Anne e Cordonê",
         desc: "Volume estratégico e transparência na medida certa. Saia feita com fio Anne e Cordonê.",
         variants: [
@@ -99,7 +99,7 @@ const productsDB = {
         ] 
     },
     "trama-canelada": { 
-        name: "Trama Canelada", cat: "Saia", gender: "Feminino", img: "img/trama-canelada.jpg", price: 135,
+        name: "Trama Canelada", cat: "Saia", gender: "Feminino", img: "img/trama-canelada.jpg", price: 135.00,
         yarn: "Anne 100% Algodão",
         desc: "Caimento fluido e alongado. As texturas verticais valorizam a silhueta. Saia feita com fio Anne.",
         variants: [
@@ -110,20 +110,20 @@ const productsDB = {
         ] 
     },
     "ondas-velho-chico": { 
-        name: "Ondas Velho Chico", cat: "Saia", gender: "Feminino", img: "img/ondas-velho-chico.jpg", price: 135,
+        name: "Ondas Velho Chico", cat: "Saia", gender: "Feminino", img: "img/ondas-velho-chico.jpg", price: 135.00,
         yarn: "Anne e Cordonê",
         desc: "Inspirada no balanço das águas, essa saia traz um movimento único a cada passo. Saia feita com fio Anne e Cordonê.",
         variants: [
             vImg(V.terracota, "img/ondas-velho-chico.jpg"),
             vImg(V.offwhite, "img/ondas-velho-chico-offwhite.jpg"),
             vImg(V.preto, "img/ondas-velho-chico-preto.jpg"),
-            vImg(V.verde, "img/ondas-velho-chico-offwhite.jpg", V.offwhite.name)
+            vImg(V.verde, "img/ondas-velho-chico-verde.jpg")
         ] 
     },
 
     // CAMISETAS
     "mosaico-junino": {
-        name: "Mosaico Junino", cat: "Camiseta", gender: "Masculino", img: "img/camisa-mosaico.jpg", price: 395,
+        name: "Mosaico Junino", cat: "Camiseta", gender: "Masculino", img: "img/camisa-mosaico.jpg", price: 320.00,
         yarn: "Anne 100% Algodão",
         desc: "Padronagem exclusiva que homenageia as festividades nordestinas, com caimento perfeito. Camiseta feita com fio Anne.",
         variants: [
@@ -135,7 +135,7 @@ const productsDB = {
         ] 
     },
     "sertao": {
-        name: "Sertão", cat: "Camiseta", gender: "Masculino", img: "img/camisa-sertao.jpg", price: 315,
+        name: "Sertão", cat: "Camiseta", gender: "Masculino", img: "img/camisa-sertao.jpg", price: 299.90,
         yarn: "Anne 100% Algodão",
         desc: "Corte reto e estruturado. A trama em crochê traz uma releitura rústica e sofisticada da camisa clássica. Camiseta feita com fio Anne.",
         variants: [
@@ -143,11 +143,11 @@ const productsDB = {
             vImg(V.lima, "img/camisa-sertao-lima.jpg"),
             vImg(V.verde, "img/camisa-sertao-verde.jpg"),
             vImg(V.preto, "img/camisa-sertao-preto.jpg"),
-            vImg(V.offwhite, "img/camisa-sertao-lima.jpg", V.lima.name)
+            vImg(V.offwhite, "img/camisa-sertao-offwhite.jpg",)
         ] 
     },
     "chama-nordestina": {
-        name: "Chama Nordestina", cat: "Camiseta", gender: "Masculino", img: "img/camisa-chama.jpg", price: 345,
+        name: "Chama Nordestina", cat: "Camiseta", gender: "Masculino", img: "img/camisa-chama.jpg", price: 280.00,
         yarn: "Anne 100% Algodão",
         desc: "Frescor e personalidade. Uma peça com vazados estratégicos para quem tem atitude. Camiseta feita com fio Anne.",
         variants: [
@@ -420,7 +420,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 errorMsg.classList.remove('hidden');
                 return;
             }
-            const message = `Olá! Eu tenho interesse na peça ${product.name} com cor ${selectedColor.name} (feita de fio ${selectedColor.yarn}) com tamanho ${selectedSize}. Podemos conversar sobre prazo e medidas e combinar o valor?`;
+            const message = `Olá! Eu tenho interesse na peça ${product.name} de cor ${selectedColor.name} e tamanho ${selectedSize}. Podemos alinhar as medidas, o valor e o prazo?`;
             const wppUrl = `https://wa.me/5581995800702?text=${encodeURIComponent(message)}`;
             window.open(wppUrl, '_blank');
         });
