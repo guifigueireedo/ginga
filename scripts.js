@@ -3,161 +3,159 @@
 // ==========================================
 
 const V = {
-    terracota: { name: "Marrom (Terracota)", hex: "#713422", yarn: "Anne 100% Algodão" },
-    lima: { name: "Amarelo Manteiga", hex: "#f7f198", yarn: "Anne 100% Algodão" },
-    offwhite: { name: "Off White", hex: "#eaccae", yarn: "Anne 100% Algodão" },
-    pretoAnne: { name: "Preto", hex: "#000000", yarn: "Anne 100% Algodão" },
-    pretoCordone: { name: "Preto Brilho", hex: "#1a1a1a", yarn: "Cordonê 100% Poliamida" }, 
-    verdeAnne: { name: "Verde Musgo", hex: "#506333", yarn: "Anne 100% Algodão" },
-    verdeCordone: { name: "Verde Musgo Brilho", hex: "#3e4d27", yarn: "Cordonê 100% Poliamida" }
+    terracota: { name: "Marrom (Terracota)", hex: "#713422" },
+    lima: { name: "Amarelo Manteiga", hex: "#f7f198" },
+    offwhite: { name: "Off White", hex: "#eaccae" },
+    preto: { name: "Preto", hex: "#000000" }, // Simplificado sem o fio no nome
+    verde: { name: "Verde Musgo", hex: "#506333" } // Simplificado sem o fio no nome
 };
 
 // HELPER: Função que atrela a imagem e o placeholder à variante
 const vImg = (baseColor, imgPath, placeholderOf = null) => ({
     ...baseColor,
     img: imgPath,
-    placeholder: placeholderOf // Nome da cor que está na foto (ex: "Amarelo Manteiga")
+    placeholder: placeholderOf
 });
 
 const productsDB = {
     // CONJUNTOS
     "maria-bonita-chic": { 
         name: "Maria Bonita Chic", cat: "Conjunto", gender: "Feminino", img: "img/maria-bonita-chic.jpg", price: 280,
-        desc: "Conjunto clássico e atemporal. A união perfeita entre técnica tradicional e caimento moderno.",
+        yarn: "Anne 100% Algodão",
+        desc: "Conjunto clássico e atemporal. A união perfeita entre técnica tradicional e caimento moderno. Conjunto feito com fio Anne.",
         variants: [
-            vImg(V.offwhite, "img/maria-bonita-chic-offwhite.jpg"), //OK
-            vImg(V.terracota, "img/maria-bonita-chic.jpg"), //OK
-            vImg(V.verdeCordone, "img/maria-bonita-chic-verdecordone.jpg"), //OK
-            vImg(V.verdeAnne, "img/maria-bonita-chic-verdeanne.jpg") //OK
+            vImg(V.terracota, "img/maria-bonita-chic.jpg"),
+            vImg(V.offwhite, "img/maria-bonita-chic-offwhite.jpg"),
+            vImg(V.verde, "img/maria-bonita-chic-verde.jpg")
         ] 
     },
     "glow-arraial": { 
         name: "Glow Arraial", cat: "Conjunto", gender: "Feminino", img: "img/glow-arraial.jpg", price: 225,
-        desc: "Trama aberta e respirável, garantindo um visual leve e praiano para qualquer ocasião.",
+        yarn: "Anne 100% Algodão",
+        desc: "Trama aberta e respirável, garantindo um visual leve e praiano para qualquer ocasião. Conjunto feito com fio Anne.",
         variants: [
-            vImg(V.verdeCordone, "img/glow-arraial.jpg"), //OK
-            vImg(V.verdeAnne, "img/glow-arraial.jpg", V.verdeCordone.name), //OK (TODO)
-            vImg(V.terracota, "img/glow-arraial-terracota.jpg"), //OK
-            vImg(V.offwhite, "img/glow-arraial-offwhite.jpg") //OK
+            vImg(V.verde, "img/glow-arraial.jpg"),
+            vImg(V.terracota, "img/glow-arraial-terracota.jpg"),
+            vImg(V.offwhite, "img/glow-arraial-offwhite.jpg")
         ] 
     },
     "luar-do-sertao": { 
         name: "Luar do Sertão", cat: "Conjunto", gender: "Feminino", img: "img/luar-do-sertao.jpg", price: 255,
-        desc: "Design arrojado com fendas táticas. Ideal para os dias mais quentes do verão.",
+        yarn: "Anne e Cordonê",
+        desc: "Design arrojado com fendas táticas. Ideal para os dias mais quentes do verão. Conjunto feito com fio Anne e Cordonê.",
         variants: [
-            vImg(V.lima, "img/luar-do-sertao.jpg"), //OK
-            vImg(V.terracota, "img/luar-do-sertao.jpg", V.lima.name), //OK (TODO)
-            vImg(V.offwhite, "img/luar-do-sertao.jpg", V.lima.name), //OK (TODO)
-            vImg(V.verdeAnne, "img/luar-do-sertao.jpg", V.lima.name), //OK (TODO)
-            vImg(V.verdeCordone, "img/luar-do-sertao.jpg", V.lima.name) //OK (TODO)
+            vImg(V.lima, "img/luar-do-sertao.jpg"),
+            vImg(V.terracota, "img/luar-do-sertao.jpg", V.lima.name),
+            vImg(V.offwhite, "img/luar-do-sertao.jpg", V.lima.name),
+            vImg(V.verde, "img/luar-do-sertao.jpg", V.lima.name)
         ] 
     },
     
     // TOPS
     "trama-maria": { 
         name: "Trama Maria", cat: "Top", gender: "Feminino", img: "img/trama-maria.jpg", price: 140,
-        desc: "Minimalista e essencial. O top perfeito para composições, feito inteiramente à mão.",
+        yarn: "Anne 100% Algodão",
+        desc: "Minimalista e essencial. O top perfeito para composições. Top feito com fio Anne.",
         variants: [
-            vImg(V.terracota, "img/trama-maria.jpg"), //OK
-            vImg(V.lima, "img/trama-maria-lima.jpg"), //OK
-            vImg(V.offwhite, "img/trama-maria-lima.jpg", V.lima.name), //OK (TODO)
-            vImg(V.pretoAnne, "img/trama-maria-preto.jpg") //OK
+            vImg(V.terracota, "img/trama-maria.jpg"),
+            vImg(V.lima, "img/trama-maria-lima.jpg"),
+            vImg(V.offwhite, "img/trama-maria-offwhite.jpg"), 
+            vImg(V.preto, "img/trama-maria-preto.jpg")
         ] 
     },
     "perola-do-agreste": { 
         name: "Pérola do Agreste", cat: "Top", gender: "Feminino", img: "img/perola-do-agreste.jpg", price: 140,
-        desc: "Detalhes delicados na amarração. Pode ser usado como peça principal ou sobreposição.",
+        yarn: "Anne 100% Algodão",
+        desc: "Detalhes delicados na amarração. Pode ser usado como peça principal ou sobreposição. Top feito com fio Anne.",
         variants: [
-            vImg(V.offwhite, "img/perola-do-agreste.jpg"), //OK
-            vImg(V.terracota, "img/perola-do-agreste-terracota.jpg"), //OK
-            vImg(V.lima, "img/perola-do-agreste-lima.jpg"), //OK
-            vImg(V.pretoAnne, "img/perola-do-agreste-preto.jpg") //OK
+            vImg(V.offwhite, "img/perola-do-agreste.jpg"),
+            vImg(V.terracota, "img/perola-do-agreste-terracota.jpg"),
+            vImg(V.lima, "img/perola-do-agreste-lima.jpg"),
+            vImg(V.preto, "img/perola-do-agreste-preto.jpg")
         ] 
     },
     "ponto-de-fogo": { 
         name: "Ponto de Fogo", cat: "Top", gender: "Feminino", img: "img/ponto-de-fogo.jpg", price: 180,
-        desc: "Modelagem cropped com suporte firme e textura rica aos olhos e ao toque.",
+        yarn: "Anne 100% Algodão",
+        desc: "Modelagem cropped com suporte firme e textura rica aos olhos e ao toque. Top feito com fio Anne.",
         variants: [
-            vImg(V.terracota, "img/ponto-de-fogo.jpg"), //OK
-            vImg(V.lima, "img/ponto-de-fogo-lima.jpg"), //OK
-            vImg(V.pretoAnne, "img/ponto-de-fogo-preto.jpg"), //OK
-            vImg(V.offwhite, "img/ponto-de-fogo-offwhite.jpg") //OK
+            vImg(V.terracota, "img/ponto-de-fogo.jpg"),
+            vImg(V.lima, "img/ponto-de-fogo-lima.jpg"),
+            vImg(V.preto, "img/ponto-de-fogo-preto.jpg"),
+            vImg(V.offwhite, "img/ponto-de-fogo-offwhite.jpg")
         ] 
     },
 
     // SAIAS
     "ventanias-do-arraial": { 
         name: "Ventanias do Arraial", cat: "Saia", gender: "Feminino", img: "img/ventanias-do-arraial.jpg", price: 225,
-        desc: "Volume estratégico e transparência na medida certa. Uma peça de destaque absoluto.",
+        yarn: "Anne e Cordonê",
+        desc: "Volume estratégico e transparência na medida certa. Saia feita com fio Anne e Cordonê.",
         variants: [
-            vImg(V.verdeAnne, "img/ventanias-do-arraial.jpg"), //OK
-            vImg(V.verdeCordone, "img/ventanias-do-arraial.jpg", V.verdeAnne.name), //OK (TODO)
-            vImg(V.pretoAnne, "img/ventanias-do-arraial-preto.jpg"), //OK
-            vImg(V.pretoCordone, "img/ventanias-do-arraial-preto.jpg", V.pretoAnne.name), //OK (TODO)
-            vImg(V.offwhite, "img/ventanias-do-arraial-offwhite.jpg"), //OK
-            vImg(V.terracota, "img/ventanias-do-arraial-terracota.jpg") //OK
+            vImg(V.verde, "img/ventanias-do-arraial.jpg"),
+            vImg(V.preto, "img/ventanias-do-arraial-preto.jpg"),
+            vImg(V.offwhite, "img/ventanias-do-arraial-offwhite.jpg"),
+            vImg(V.terracota, "img/ventanias-do-arraial-terracota.jpg")
         ] 
     },
     "trama-canelada": { 
         name: "Trama Canelada", cat: "Saia", gender: "Feminino", img: "img/trama-canelada.jpg", price: 135,
-        desc: "Caimento fluido e alongado. As texturas verticais valorizam a silhueta naturalmente.",
+        yarn: "Anne 100% Algodão",
+        desc: "Caimento fluido e alongado. As texturas verticais valorizam a silhueta. Saia feita com fio Anne.",
         variants: [
-            vImg(V.terracota, "img/trama-canelada-terracota.jpg"), //OK
-            vImg(V.offwhite, "img/trama-canelada.jpg"), //OK
-            vImg(V.pretoAnne, "img/trama-canelada-preto.jpg"), //OK
-            vImg(V.pretoCordone, "img/trama-canelada-preto.jpg", V.pretoAnne.name), //OK (TODO)
-            vImg(V.verdeAnne, "img/trama-canelada-verde.jpg"), //OK
-            vImg(V.verdeCordone, "img/trama-canelada-verde.jpg", V.verdeAnne.name) //OK (TODO)
+            vImg(V.offwhite, "img/trama-canelada.jpg"),
+            vImg(V.terracota, "img/trama-canelada-terracota.jpg"),
+            vImg(V.preto, "img/trama-canelada-preto.jpg",),
+            vImg(V.verde, "img/trama-canelada-verde.jpg",)
         ] 
     },
     "ondas-velho-chico": { 
         name: "Ondas Velho Chico", cat: "Saia", gender: "Feminino", img: "img/ondas-velho-chico.jpg", price: 135,
-        desc: "Inspirada no balanço das águas, essa saia traz um movimento único a cada passo.",
+        yarn: "Anne e Cordonê",
+        desc: "Inspirada no balanço das águas, essa saia traz um movimento único a cada passo. Saia feita com fio Anne e Cordonê.",
         variants: [
-            vImg(V.terracota, "img/ondas-velho-chico.jpg"), //OK
-            vImg(V.offwhite, "img/ondas-velho-chico-offwhite.jpg"), //OK
-            vImg(V.verdeAnne, "img/ondas-velho-chico-offwhite.jpg", V.offwhite.name), //OK (TODO)
-            vImg(V.verdeCordone, "img/ondas-velho-chico-offwhite.jpg", V.offwhite.name), //OK (TODO)
-            vImg(V.pretoCordone, "img/ondas-velho-chico-preto.jpg"), //OK
-            vImg(V.pretoAnne, "img/ondas-velho-chico-preto.jpg", V.pretoCordone.name) //OK (TODO)
+            vImg(V.terracota, "img/ondas-velho-chico.jpg"),
+            vImg(V.offwhite, "img/ondas-velho-chico-offwhite.jpg"),
+            vImg(V.preto, "img/ondas-velho-chico-preto.jpg"),
+            vImg(V.verde, "img/ondas-velho-chico-offwhite.jpg", V.offwhite.name)
         ] 
     },
 
     // CAMISETAS
     "mosaico-junino": {
         name: "Mosaico Junino", cat: "Camiseta", gender: "Masculino", img: "img/camisa-mosaico.jpg", price: 395,
-        desc: "Padronagem exclusiva que homenageia as festividades nordestinas, com caimento perfeito.",
+        yarn: "Anne 100% Algodão",
+        desc: "Padronagem exclusiva que homenageia as festividades nordestinas, com caimento perfeito. Camiseta feita com fio Anne.",
         variants: [
-            vImg(V.terracota, "img/camisa-mosaico-terracota.jpg"), //OK
-            vImg(V.offwhite, "img/camisa-mosaico.jpg"), //OK
-            vImg(V.lima, "img/camisa-mosaico.jpg", V.offwhite.name), //OK (TODO)
-            vImg(V.verdeAnne, "img/camisa-mosaico-terracota.jpg", V.terracota.name), //OK (TODO)
-            vImg(V.verdeCordone, "img/camisa-mosaico-terracota.jpg", V.terracota.name), //OK (TODO)
-            vImg(V.pretoAnne, "img/camisa-mosaico-terracota.jpg", V.terracota.name) //OK (TODO)
+            vImg(V.offwhite, "img/camisa-mosaico.jpg"),
+            vImg(V.lima, "img/camisa-mosaico-lima.jpg"), 
+            vImg(V.terracota, "img/camisa-mosaico-terracota.jpg"),
+            vImg(V.verde, "img/camisa-mosaico-verde.jpg"), 
+            vImg(V.preto, "img/camisa-mosaico-preto.jpg") 
         ] 
     },
     "sertao": {
         name: "Sertão", cat: "Camiseta", gender: "Masculino", img: "img/camisa-sertao.jpg", price: 315,
-        desc: "Corte reto e estruturado. A trama em crochê traz uma releitura rústica e sofisticada da camisa clássica.",
+        yarn: "Anne 100% Algodão",
+        desc: "Corte reto e estruturado. A trama em crochê traz uma releitura rústica e sofisticada da camisa clássica. Camiseta feita com fio Anne.",
         variants: [
-            vImg(V.terracota, "img/camisa-sertao.jpg"), //OK
-            vImg(V.lima, "img/camisa-sertao-lima.jpg"), //OK
-            vImg(V.offwhite, "img/camisa-sertao-lima.jpg", V.lima.name), //OK (TODO)
-            vImg(V.verdeAnne, "img/camisa-sertao-verde.jpg"), //OK
-            vImg(V.verdeCordone, "img/camisa-sertao-verde.jpg", V.verdeAnne.name), //OK (TODO)
-            vImg(V.pretoAnne, "img/camisa-sertao-preto.jpg") //OK
+            vImg(V.terracota, "img/camisa-sertao.jpg"),
+            vImg(V.lima, "img/camisa-sertao-lima.jpg"),
+            vImg(V.verde, "img/camisa-sertao-verde.jpg"),
+            vImg(V.preto, "img/camisa-sertao-preto.jpg"),
+            vImg(V.offwhite, "img/camisa-sertao-lima.jpg", V.lima.name)
         ] 
     },
     "chama-nordestina": {
         name: "Chama Nordestina", cat: "Camiseta", gender: "Masculino", img: "img/camisa-chama.jpg", price: 345,
-        desc: "Frescor e personalidade. Uma peça com vazados estratégicos para quem tem atitude.",
+        yarn: "Anne 100% Algodão",
+        desc: "Frescor e personalidade. Uma peça com vazados estratégicos para quem tem atitude. Camiseta feita com fio Anne.",
         variants: [
-            vImg(V.offwhite, "img/camisa-chama.jpg"), //OK
-            vImg(V.lima, "img/camisa-chama.jpg", V.offwhite.name), //OK (TODO)
-            vImg(V.terracota, "img/camisa-chama.jpg", V.offwhite.name), //OK (TODO)
-            vImg(V.verdeAnne, "img/camisa-chama.jpg", V.offwhite.name), //OK (TODO)
-            vImg(V.verdeCordone, "img/camisa-chama.jpg", V.offwhite.name), //OK (TODO)
-            vImg(V.pretoAnne, "img/camisa-chama.jpg", V.offwhite.name) //OK (TODO)
+            vImg(V.offwhite, "img/camisa-chama.jpg"),
+            vImg(V.lima, "img/camisa-chama-lima.jpg"), 
+            vImg(V.terracota, "img/camisa-chama-terracota.jpg"), 
+            vImg(V.verde, "img/camisa-chama-verde.jpg"), 
+            vImg(V.preto, "img/camisa-chama-preto.jpg") 
         ] 
     }
 };
